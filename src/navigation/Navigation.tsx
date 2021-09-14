@@ -2,6 +2,7 @@ import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Home } from "../screens/Home";
 import Icon from "react-native-vector-icons/Ionicons";
+import { User } from "../screens/User";
 import { Shop } from "../screens/Shop";
 
 const Tab = createBottomTabNavigator();
@@ -35,7 +36,7 @@ export const Navigation = () => {
     >
       <Tab.Screen options={{ title: "" }} name="Shoping" component={Shop} />
       <Tab.Screen options={{ title: "" }} name="Home" component={Home} />
-      <Tab.Screen options={{ title: "" }} name="Profile" component={Shop} />
+      <Tab.Screen options={{ title: "" }} name="Profile" component={User} />
     </Tab.Navigator>
   );
 };

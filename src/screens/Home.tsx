@@ -6,6 +6,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Card } from "../components/Card";
 import { useRequest } from "../hooks/useRequest";
 import { Filters } from "../components/Filters";
+import { Days } from "../components/Days";
 
 export const Home = () => {
   const { top: paddingTop } = useSafeAreaInsets();
@@ -14,7 +15,12 @@ export const Home = () => {
   return (
     <View style={{ flex: 1, paddingTop, backgroundColor: "#FEF2F1" }}>
       <Search />
-      <Filters />
+      <View style={{ alignItems: "center", paddingTop: 10}}>
+        <Days />
+      </View>
+      <View style={{paddingTop: 10 }}>
+        <Filters />
+      </View>
       <FlatList
         style={{
           paddingTop: 20,

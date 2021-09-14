@@ -14,7 +14,7 @@ interface Props {
 export const Filter = ({ options, first, title, icon }: Props) => {
   const [modal, setModal] = useState(false);
   const [option, setOption] = useState(first);
-  const { category, date } = useContext(CatContext);
+  const { category, time } = useContext(CatContext);
   return (
     <>
       <Button
@@ -44,7 +44,7 @@ export const Filter = ({ options, first, title, icon }: Props) => {
               <Button
                 key={e}
                 onPress={() => {
-                  !e.includes("0") ? category(e) : date(e);
+                  !e.includes("0") ? category(e) : time(e);
                   setOption(e);
                   setModal(false);
                 }}

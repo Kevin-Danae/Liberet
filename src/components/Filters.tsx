@@ -15,7 +15,7 @@ export const Filters = () => {
         justifyContent: "space-evenly",
         alignItems: "center",
         flexDirection: "row",
-        paddingTop: 8,
+        paddingTop: 10,
       }}
     >
       <Filter

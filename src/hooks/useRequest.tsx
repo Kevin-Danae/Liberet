@@ -15,7 +15,7 @@ export const useRequest = () => {
 
   useEffect(() => {
     request();
-  }, [meal]);
+  }, [catState]);
 
   return {
     meal,
