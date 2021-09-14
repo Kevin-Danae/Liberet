@@ -13,8 +13,8 @@ export const Card = ({ meal }: Props) => {
   const { info } = useSubRequest(meal.idMeal);
   let index = info.strTags ? info.strTags.indexOf(",") : 10;
   return (
-    <Box px={3} py={1}>
-      <Box width={160} shadow={5} borderRadius={10} backgroundColor="white">
+    <Box mb={-16} height={270}>
+      <Box width={150} height={180} shadow={5} borderRadius={10} backgroundColor="white">
         <Box borderRadius={10} shadow={5}>
           <AspectRatio ratio={1 / 1}>
             <Image
@@ -71,8 +71,8 @@ export const Card = ({ meal }: Props) => {
               : "Quedan 0"}
           </Center>
         </Box>
-        <Box backgroundColor="white" height={6}>
-          <HStack alignItems="center" space={4} justifyContent="space-between">
+        <Box backgroundColor="white" height={6} paddingTop={1}>
+          <HStack alignItems="center" space={4} justifyContent="space-around">
             <HStack alignItems="center">
               <Icon name="time-outline" color="#FDC963" size={20} />
             </HStack>

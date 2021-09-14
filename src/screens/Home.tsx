@@ -5,6 +5,7 @@ import { Search } from "../components/Search";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Card } from "../components/Card";
 import { useRequest } from "../hooks/useRequest";
+import { Filters } from "../components/Filters";
 
 export const Home = () => {
   const { top: paddingTop } = useSafeAreaInsets();
@@ -12,11 +13,17 @@ export const Home = () => {
 
   return (
     <View style={{ flex: 1, paddingTop, backgroundColor: "#FEF2F1" }}>
-      <TouchableOpacity onPress={() => alert("Hola")}>
-        <Search />
-      </TouchableOpacity>
+      <Search />
+      <Filters />
       <FlatList
-        columnWrapperStyle={{justifyContent: 'space-between'}}
+        style={{
+          paddingTop: 20,
+          paddingRight: 15,
+          paddingLeft: 15,
+          height: 1000,
+        }}
+        keyExtractor={(item) => item.idMeal}
+        columnWrapperStyle={{ justifyContent: "space-around" }}
         data={meal}
         renderItem={({ item }) => <Card key={item.idMeal} meal={item} />}
         numColumns={2}

@@ -19,7 +19,7 @@ export const useSubRequest = (id: string) => {
 
   useEffect(() => {
       subReq();
-  }, [info])
+  }, [])
 
   return { info };
 };

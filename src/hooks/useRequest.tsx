@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from "react";
-import { Meal, MealCard } from "../interfaces/Interfaces";
+import React, { useContext, useEffect, useState } from "react";
+import { Meal } from "../interfaces/Interfaces";
+import { CatContext } from "../context/CatContext";
 
 export const useRequest = () => {
   const [meal, setMeal] = useState<Meal[]>([]);
-  const info: MealCard[] = [];
-
+  const { catState } = useContext(CatContext);
   const request = async () => {
     const api = await fetch(
-      "https://www.themealdb.com/api/json/v1/1/filter.php?c=Beef"
+      `https://www.themealdb.com/api/json/v1/1/filter.php?c=${catState.category}`
     );
     const data = await api.json();
     setMeal(data.meals);
@@ -15,7 +15,7 @@ export const useRequest = () => {
 
   useEffect(() => {
     request();
-  }, []);
+  }, [meal]);
 
   return {
     meal,
