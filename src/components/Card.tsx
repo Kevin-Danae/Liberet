@@ -14,7 +14,13 @@ export const Card = ({ meal }: Props) => {
   let index = info.strTags ? info.strTags.indexOf(",") : 10;
   return (
     <Box mb={-16} height={270}>
-      <Box width={150} height={180} shadow={5} borderRadius={10} backgroundColor="white">
+      <Box
+        width={150}
+        height={180}
+        shadow={5}
+        borderRadius={10}
+        backgroundColor="white"
+      >
         <Box borderRadius={10} shadow={5}>
           <AspectRatio ratio={1 / 1}>
             <Image
@@ -53,7 +59,7 @@ export const Card = ({ meal }: Props) => {
           </Center>
           <Center
             borderRadius={10}
-            bg="black"
+            bg="#FEF2F1"
             width={20}
             height={5}
             position="absolute"

@@ -25,7 +25,6 @@ export const Days = () => {
           <View
             style={{
               flexDirection: "column",
-              backgroundColor: "white",
               width: 51,
               height: 40,
               paddingLeft: 5,

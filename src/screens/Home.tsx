@@ -13,9 +13,9 @@ export const Home = () => {
   const { meal } = useRequest();
 
   return (
-    <View style={{ flex: 1, paddingTop, backgroundColor: "#FEF2F1" }}>
+    <View style={{ flex: 1, paddingTop, backgroundColor: "" }}>
       <Search />
-      <View style={{ alignItems: "center", paddingTop: 10}}>
+      <View style={{ alignItems: "center", paddingTop: 10, backgroundColor: 'white'}}>
         <Days />
       </View>
       <View style={{paddingTop: 10 }}>
